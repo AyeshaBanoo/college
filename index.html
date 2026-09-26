@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #172554;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #dbeafe, #eff6ff);
+            padding: 40px 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 50px;
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h3 {
+            color: #2563eb;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            max-width: 650px;
+            margin: auto;
+            color: #555;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #172554;
+        }
+
+        /* General Sections */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #172554;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        /* About */
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: #555;
+            font-size: 17px;
+        }
+
+        /* Education */
+        .education {
+            background-color: #f4f7fb;
+        }
+
+        .education-box {
+            max-width: 750px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #2563eb;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .education-box h3 {
+            color: #172554;
+        }
+
+        .education-box p {
+            color: #666;
+        }
+
+        /* Skills */
+        .skills {
+            background-color: white;
+        }
+
+        .skill-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background-color: #dbeafe;
+            color: #172554;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* Projects */
+        .projects {
+            background-color: #f4f7fb;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: white;
+            width: 300px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #666;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: white;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px;
+            color: #555;
+        }
+
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .hero-content h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>My Portfolio</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hello, I'm Ayesha</h1>
+            <h3>Computer Science Student</h3>
+
+            <p>
+                Welcome to my personal portfolio. I am a passionate student
+                interested in programming, web development and technology.
+            </p>
+
+            <a href="#about" class="btn">Know More</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+            <p>
+                I am a Computer Science student who enjoys learning new
+                technologies and developing creative projects. I am interested
+                in web development, programming and problem solving.
+            </p>
+
+            <p>
+                My goal is to continuously improve my technical skills and
+                gain practical experience by working on interesting projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="education" id="education">
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-box">
+            <h3>Bachelor of Computer Science</h3>
+            <p>Your College Name</p>
+            <p>2024 - Present</p>
+        </div>
+
+        <div class="education-box">
+            <h3>Higher Secondary Education</h3>
+            <p>Your School Name</p>
+            <p>2022 - 2024</p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skill-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Java</div>
+            <div class="skill">Python</div>
+            <div class="skill">C Programming</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Problem Solving</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+                <h3>Student Portfolio</h3>
+                <p>
+                    A personal portfolio website created using HTML and CSS
+                    to showcase my skills, education and projects.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>College Website</h3>
+                <p>
+                    A simple college website containing information about
+                    departments, courses, facilities and contact details.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>To-Do List</h3>
+                <p>
+                    A basic task management project designed to help users
+                    organize their daily activities.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <p><strong>Email:</strong>
+            <a href="mailto:yourname@email.com">
+                yourname@email.com
+            </a>
+        </p>
+
+        <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+
+        <p><strong>Location:</strong> Mangaluru, India</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Your Name | Student Portfolio</p>
+    </footer>
+
+</body>
+</html>
